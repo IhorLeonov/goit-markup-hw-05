@@ -57,7 +57,9 @@
       <section class="hero-section"
         ><div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button primary" type="button">Замовити послугу</button></div
+          <button class="button primary" type="button"
+          data-modal-open>Замовити послугу</button
+          ></div
         >
       </section>
       <section class="benefits section"
@@ -123,9 +125,10 @@
                 src="./images/img1.jpg"
                 alt="Программують за допомогю планшета та компьютера"
                 width="370"
-                height="294" />
-              <p class="work-img-desc">Десктопні додатки</p
-            ></li>
+                height="294"
+              />
+              <p class="work-img-desc">Десктопні додатки</p></li
+            >
             <li class="work-list-item"
               ><img
                 class="work-img"
@@ -133,8 +136,8 @@
                 alt="Ноутбук з мобильною версією сайту, у руках телефон"
                 width="370"
                 height="294"
-            /><p class="work-img-desc">Мобільні додатки</p
-              ></li>
+              /><p class="work-img-desc">Мобільні додатки</p></li
+            >
             <li class="work-list-item"
               ><img
                 class="work-img"
@@ -142,9 +145,10 @@
                 alt="Планшет у руках, на якому кольорова палітра"
                 width="370"
                 height="294"
-            /><p class="work-img-desc">Дизайнерські рішення</p
-              ></li></ul
-        ></div>
+              /><p class="work-img-desc">Дизайнерські рішення</p></li
+            ></ul
+          ></div
+        >
       </section>
       <!-- Наша комманда -->
       <section class="team-section section"
@@ -367,7 +371,7 @@
       </section>
       <!-- Clients -->
       <section class="section"
-        ><div class="conteiner">
+        ><div class="container">
           <h2 class="clients-title">Постійни кліенти</h2>
           <ul class="clients-list">
             <li class="clients-item"
@@ -428,14 +432,12 @@
                 rel="noopener noreferrer"
                 aria-label=""
                 ><svg class="clients-icon">
-                  <use href="./images/icons.svg#Logo6"></use></svg></a
-            ></li>
-          </ul> </div
+                  <use href="./images/icons.svg#Logo6"></use></svg></a></li></ul></div
       ></section>
     </main>
     <!--Підвал-->
     <footer>
-      <div class="container footer-conteiner">
+      <div class="container footer-container">
         <div class="footer-item"
           ><a class="logo-bottom link" href="./index.html"
             >Web<span class="footer-logo-color">Studio</span></a
@@ -513,6 +515,16 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg class="modal-close-icon">
+            <use href="./images/icons.svg#close-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js">
+    </script>
   </body>
 </html>

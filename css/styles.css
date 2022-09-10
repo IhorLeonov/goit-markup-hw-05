@@ -490,13 +490,15 @@ img {
 }
 
 .card-desc {
-  display: inline-block;
-  padding: 63px 24px;
-  content: '';
-
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  display: inline-block;
+  padding: 63px 24px;
+  content: '';
 
   width: 100%;
   height: 100%;
@@ -504,25 +506,23 @@ img {
   font-weight: 400;
   font-size: 18px;
   line-height: calc(28 / 18);
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-img-box::before {
-  display: inline-block;
-  content: '';
-
   position: absolute;
   top: 0;
   left: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  content: '';
 
   width: 100%;
   height: 100%;
+
   background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link:hover .portfolio-img-box::before,
-.portfolio-link:hover .card-desc{
+.portfolio-link:hover .card-desc {
   transform: translateY(0);
 }
 /* Footer */
@@ -573,7 +573,7 @@ footer {
 .contact-adress-list > li:last-child {
   margin-bottom: 0px;
 }
-.footer-conteiner {
+.footer-container {
   display: flex;
   align-items: baseline;
   list-style: none;
@@ -596,4 +596,60 @@ footer {
   width: 20px;
   height: 20px;
   fill: var(--primery-white-color);
+}
+.backdrop {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 528px;
+  height: 581px;
+
+  background-color: var(--primery-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.modal-close-btn {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  padding: 0;
+
+  background-color: var(--primery-white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-close-icon {
+  width: 18px;
+  height: 18px;
 }
