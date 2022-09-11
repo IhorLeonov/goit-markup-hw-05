@@ -226,7 +226,8 @@ img {
   font-weight: 500;
   line-height: calc(26 / 16);
   letter-spacing: 0.03em;
-  transition: background-color var(--main-animation), color var(--main-animation), box-shadow var(--main-animation);
+  transition: background-color var(--main-animation), color var(--main-animation),
+    box-shadow var(--main-animation);
 }
 
 .filter-list-item.first-btn {
@@ -476,10 +477,13 @@ img {
 }
 .potfolio-list-item {
   flex-basis: calc((100% - 60px) / 3);
+}
+.portfolio-link {
+  display: block;
   transition: box-shadow var(--main-animation);
 }
-.potfolio-list-item:hover,
-.potfolio-list-item:focus {
+.portfolio-link:hover,
+.portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -530,6 +534,10 @@ img {
 }
 .portfolio-link:hover .portfolio-img-box::before,
 .portfolio-link:hover .card-desc {
+  transform: translateY(0);
+}
+.portfolio-link:focus .portfolio-img-box::before,
+.portfolio-link:focus .card-desc {
   transform: translateY(0);
 }
 /* Footer */
@@ -614,7 +622,7 @@ footer {
 
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity var(--main-animation);
+  transition: opacity var(--main-animation), visibility var(--main-animation);
 }
 .modal {
   position: absolute;
@@ -640,7 +648,7 @@ footer {
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.9);
   opacity: 1;
-} 
+}
 .modal-close-btn {
   position: absolute;
   right: 8px;
