@@ -57,8 +57,8 @@
       <section class="hero-section"
         ><div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="button primary" type="button"
-          data-modal-open>Замовити послугу</button
+          <button class="button primary" type="button" data-modal-open
+            >Замовити послугу</button
           ></div
         >
       </section>
@@ -513,6 +513,23 @@
             ></li>
           </ul>
         </div>
+        <form class="subscribe-form">
+          <h3 class="socials-title">Підпишіться на розсилку</h3>
+          <label class="subscribe-form-label">
+            <input
+              class="subscribe-form-input"
+              type="email"
+              name="subscribe"
+              placeholder="E-mail"
+            />
+            <button class="subscribe-btn button" type="submit"
+              >Підписатися
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#subscribe-icon"></use>
+              </svg>
+            </button>
+          </label>
+        </form>
       </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -522,9 +539,75 @@
             <use href="./images/icons.svg#close-icon"></use>
           </svg>
         </button>
+
+        <form class="callback-form">
+          <strong class="callback-title">Залиште свої дані, ми вам передзвонимо</strong>
+          <div class="callback-form-group" role="group">
+            <label class="callback-form-field">
+              <span class="callback-form-label">Ім'я</span>
+              <input
+                class="callback-form-input"
+                type="text"
+                name="Name"
+                required
+                minlength="3"
+                placeholder=""
+              />
+            </label>
+
+            <label class="callback-form-field">
+              <span class="callback-form-label">Телефон</span>
+              <input
+                class="callback-form-input"
+                type="tel"
+                name="tel"
+                required
+                minlength="12"
+                maxlength="12"
+                placeholder=""
+              />
+            </label>
+
+            <label class="callback-form-field">
+              <span class="callback-form-label">Пошта</span>
+              <input
+                class="callback-form-input"
+                type="email"
+                name="emeil"
+                required
+                minlength="3"
+                placeholder=""
+              />
+            </label>
+
+            <label class="callback-form-field">
+              <span class="callback-form-label">Коментар</span>
+              <textarea
+                class="callback-form-input"
+                type="text"
+                name="comment"
+                required
+                minlength="3"
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+            <label class="callback-form-agreement">
+              <input
+                class="agreement-checkbox"
+                type="checkbox"
+                name="agreement-checkbox"
+                required
+              />
+              <span class="callback-agreement-desc">
+                Погоджуюся з розсилкою та приймаю
+                <a class="callback-form-link" href="" target="_blank">Умови договору</a>
+              </span>
+            </label>
+            <button class="callback-form-btn button" type="submit">Відправити</button>
+          </div>
+        </form>
       </div>
     </div>
-    <script src="./js/modal.js">
-    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
